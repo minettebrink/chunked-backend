@@ -24,8 +24,7 @@ RUN mkdir -p /app/model/chunks
 
 COPY main.py .
 
-COPY --from=downloader /app/model/chunks/model.partaa /app/model/chunks/
-COPY --from=downloader /app/model/chunks/model.partab /app/model/chunks/
+COPY --from=downloader /app/model/chunks/model.part* /app/model/chunks/
 COPY --from=downloader /root/.cache/huggingface/hub/models--Lightricks--LTX-Video/snapshots/*/model_index.json /app/model/
 COPY --from=downloader /root/.cache/huggingface/hub/models--Lightricks--LTX-Video/snapshots/*/ltx-video-2b-v0.9.5.license.txt /app/model/
 
